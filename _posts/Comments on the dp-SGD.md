@@ -1,7 +1,7 @@
 ---
 title: 'Comments on the dp-SGD'
 date: 2023-05-15
-permalink: /posts/Comments on the dp-SGD/
+permalink: [/posts/Comments on the dp-SGD/](https://github.com/HanpuShen/HanpuShen.github.io/blob/8c7bbfcbb1a7918783c25a8d5449bd4392cce7a6/_posts/Comments%20on%20the%20dp-SGD.md)
 tags:
   - cool posts
   - category1
