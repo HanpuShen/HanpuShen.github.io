@@ -1,7 +1,7 @@
 ---
 title: 'Comments on the dp-SGD'
 date: 2023-05-15
-permalink: _posts/Comments-on-the-dp-SGD.md
+permalink: /posts/Comments-on-the-dp-SGD.md
 tags:
   - cool posts
   - category1
