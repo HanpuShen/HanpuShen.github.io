@@ -1,3 +1,12 @@
+---
+title: 'Comments on the dp-SGD'
+date: 2023-05-15
+permalink: /posts/Comments on the dp-SGD/
+tags:
+  - cool posts
+  - category1
+  - category2
+---
 # Comments on the dp-SGD
 
 ## Background:
