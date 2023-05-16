@@ -11,9 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Statistics, Southen University of Science and Technology, China 2022
+* Ph.D in Statistics, University of California Irvine, 2027 (expected)
 
 Work experience
 ======
