@@ -88,7 +88,7 @@ There are two major problem needed to be explained:
    $$
    \Theta_t(x,y) = \langle\partial_Wf_{W^{(0)}}(x),\partial_Wf_{W^{(0)}}(y)\rangle
    $$
-   ​	As the NTK theory (Jacot et al. 2018) rigiously proofed that empirical NTK above converges to the deterministic Kernel $\Theta_{\infin}$ when the network is sufficiently large. Under this condition, the NTK feature space $\mathcal{F}$ is a RKHS induced by NTK. Because $M$ be a closed set restrict to $\mathbb{R}^{mL}$ , $d(x,y) = (x-y)^T\Theta_{\infin} (x-y)$  for any $x,y \in M$, then $\mathcal{F} = \{f_{W^{(0)}}(x)+\partial_Wf_{W^{(0)}}(x) W\} |W \in \mathcal{B}(\mathbf{W}^{(0)},R/\sqrt{m})\}$ meets the definition of RKHS. NTK theory tells us that for every large scale ReLU Neural Network $f^*$ we could find a "good" approximation to it in the reference space $\mathcal{F}$, which means $\inf_{f\in\mathcal{F}}\{\ell(f)-\ell(f^*)\} \to 0$ as $m\to \infin$.
+   ​	As the NTK theory (Jacot et al. 2018) rigiously proofed that empirical NTK above converges to the deterministic Kernel $\Theta_{\infty}$ when the network is sufficiently large. Under this condition, the NTK feature space $\mathcal{F}$ is a RKHS induced by NTK. Because $M$ be a closed set restrict to $\mathbb{R}^{mL}$ , $d(x,y) = (x-y)^T\Theta_{\infty} (x-y)$  for any $x,y \in M$, then $\mathcal{F} = \{f_{W^{(0)}}(x)+\partial_Wf_{W^{(0)}}(x) W |W \in \mathcal{B}(\mathbf{W}^{(0)},R/\sqrt{m})\}$ meets the definition of RKHS. NTK theory tells us that for every large scale ReLU Neural Network $f^*$ we could find a "good" approximation to it in the reference space $\mathcal{F}$, which means $\inf_{f\in\mathcal{F}}\{\ell(f)-\ell(f^*)\} \to 0$ as $m\to \infty$.
 
    ​	Despite the theoretical guarantee, one recent research's experiments (Sanjeev et al. 2019) found the SVM epuiped with NTK could achieve superior performance on ==small dataset==, this justify the NTK induced RKHS is considerable more informative than many existing reference space. ![image-20220606211759181](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220606211759181.png)
 
@@ -119,7 +119,7 @@ A **Hilbert space** $\mathcal{H}$ is a real inner product space that is also a c
 
   Let $E$ be a measurable subset of $\mathbb{R}^d$ With $m(E)> 0$, we let $L^2(E)$ denotes the space of square Lebesgue intergrable function that supported on $E$, 
   $$
-  L^2(E) = \{f|supp(f) = E,\int_E|f(x)|^2dx<\infin\}.
+  L^2(E) = \{f|supp(f) = E,\int_E|f(x)|^2dx<\infty\}.
   $$
   The inner product and norm equiped on $L^2(E)$ are
   $$
@@ -161,7 +161,7 @@ Suppose $M$ is a Hilbert space equipt with inner product $\langle\cdot,\cdot\ran
   
      ![image-20220720165519397](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220720165519397.png)
   
-  3. sample size n: We suggests the larger datasize will reduce the Excessive Population risk as $n \to \infin$.
+  3. sample size n: We suggests the larger datasize will reduce the Excessive Population risk as $n \to \infty$.
   
      1. Fix m and T:![621658090931_.pic](./img/2023-05-15-Comments-on-the-dp-SGD/621658090931_.pic.jpg)
   
