@@ -1,7 +1,7 @@
 ---
 title: 'Comments on the dp-SGD'
 date: 2023-05-15
-permalink: /posts/Comments-on-the-dp-SGD/
+permalink: /posts/2023/05/Comments-on-the-dp-SGD/
 tags:
   - Differential Privacy
   - SGD
