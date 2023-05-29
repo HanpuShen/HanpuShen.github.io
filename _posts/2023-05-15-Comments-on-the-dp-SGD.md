@@ -12,7 +12,7 @@ tags:
 ## Background:
 
 1.  Differential privacy!
-2. ![image-20220721131158989](/Users/flash/Library/Application Support/typora-user-images/image-20220721131158989.png)
+2. ![image-20220721131158989](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220721131158989.png)
 3. ![See the source image](https://ts1.cn.mm.bing.net/th/id/R-C.b2f102abbe5a9ae02ffeb0ac4f8e06a3?rik=92%2fIJiNJB2aQ4w&riu=http%3a%2f%2fwww.cs.tau.ac.il%2f%7eiftachh%2fCourses%2fSeminars%2fDP%2fDP.png&ehk=Wj%2f4UTjGF2sglf1Gk%2fwsCSj%2bcSdZvrlcvOXm%2fKWFo2M%3d&risl=&pid=ImgRaw&r=0)
 4. Advanced machine learning algorithm: DNN
 5. Dp-Neural network = DP combine DNN
@@ -54,13 +54,13 @@ Overall Map:
 
 - **Empirical NTK** of $f(\theta_t,x)$ at $x$: $\Theta_t(x) = \langle\frac{\part f(\theta_t,x)}{\part \theta_t},\frac{\part f(\theta_t,x)}{\part \theta_t}\rangle$
 
-![image-20220720002053441](/Users/flash/Library/Application Support/typora-user-images/image-20220720002053441.png)
+![image-20220720002053441](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220720002053441.png)
 
 
 
 ## Main results
 
-![image-20220604235849136](/Users/flash/Library/Application Support/typora-user-images/image-20220604235849136.png)
+![image-20220604235849136](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220604235849136.png)
 
 
 
@@ -90,7 +90,7 @@ There are two major problem needed to be explained:
    $$
    ​	As the NTK theory (Jacot et al. 2018) rigiously proofed that empirical NTK above converges to the deterministic Kernel $\Theta_{\infin}$ when the network is sufficiently large. Under this condition, the NTK feature space $\mathcal{F}$ is a RKHS induced by NTK. Because $M$ be a closed set restrict to $\mathbb{R}^{mL}$ , $d(x,y) = (x-y)^T\Theta_{\infin} (x-y)$  for any $x,y \in M$, then $\mathcal{F} = \{f_{W^{(0)}}(x)+\part_Wf_{W^{(0)}}(x) W\} |W \in \mathcal{B}(\mathbf{W}^{(0)},R/\sqrt{m})\}$ meets the definition of RKHS. NTK theory tells us that for every large scale ReLU Neural Network $f^*$ we could find a "good" approximation to it in the reference space $\mathcal{F}$, which means $\inf_{f\in\mathcal{F}}\{\ell(f)-\ell(f^*)\} \to 0$ as $m\to \infin$.
 
-   ​	Despite the theoretical guarantee, one recent research's experiments (Sanjeev et al. 2019) found the SVM epuiped with NTK could achieve superior performance on ==small dataset==, this justify the NTK induced RKHS is considerable more informative than many existing reference space. ![image-20220606211759181](/Users/flash/Library/Application Support/typora-user-images/image-20220606211759181.png)
+   ​	Despite the theoretical guarantee, one recent research's experiments (Sanjeev et al. 2019) found the SVM epuiped with NTK could achieve superior performance on ==small dataset==, this justify the NTK induced RKHS is considerable more informative than many existing reference space. ![image-20220606211759181](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220606211759181.png)
 
    
 
@@ -143,7 +143,7 @@ Suppose $M$ is a Hilbert space equipt with inner product $\langle\cdot,\cdot\ran
   
   In previous experiment (Cao and Guo et al. 2020), they conducted an experiment on the MNIST dataset by considering the NTK feature space of the five-layer fully connected NN.
   
-  ![image-20220627212545030](/Users/flash/Library/Application Support/typora-user-images/image-20220627212545030.png)
+  ![image-20220627212545030](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220627212545030.png)
   
   The results indicate the error from the reference space tends to decay as the wides of the network $m$ increase. In addition, the larger size of reference function class ($R$ ), the small the approximation error will be.
   
@@ -155,23 +155,23 @@ Suppose $M$ is a Hilbert space equipt with inner product $\langle\cdot,\cdot\ran
   
   1. Network width m: (Ideal result) n = 10000
   
-     ![2341659265316_.pic](/Users/flash/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/766901a1337f59e72b38a3095cfeedce/Message/MessageTemp/9e3312d8eee13e732ce99585f73a266e/Image/2341659265316_.pic.jpg)
+     ![2341659265316_.pic](./img/2023-05-15-Comments-on-the-dp-SGD/2341659265316_.pic.jpg)
   
   2. Trainning Steps T: (Ideal result) n = 10000
   
-     ![image-20220720165519397](/Users/flash/Library/Application Support/typora-user-images/image-20220720165519397.png)
+     ![image-20220720165519397](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220720165519397.png)
   
   3. sample size n: We suggests the larger datasize will reduce the Excessive Population risk as $n \to \infin$.
   
-     1. Fix m and T:![621658090931_.pic](/Users/flash/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/766901a1337f59e72b38a3095cfeedce/Message/MessageTemp/9e3312d8eee13e732ce99585f73a266e/Image/621658090931_.pic.jpg)
+     1. Fix m and T:![621658090931_.pic](./img/2023-05-15-Comments-on-the-dp-SGD/621658090931_.pic.jpg)
   
      2. Fix n/m =1 and T:
   
-        ![image-20220720165133808](/Users/flash/Library/Application Support/typora-user-images/image-20220720165133808.png)
+        ![image-20220720165133808](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220720165133808.png)
   
      3. Fix $ n/m = r$ and $T = s\sqrt{n}$, 这里我们可以尝试多组$(r,s)$ :r 在0.5附近的区域， s在[1,5]之间
   
-        ![2081658403858_.pic](/Users/flash/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/766901a1337f59e72b38a3095cfeedce/Message/MessageTemp/9e3312d8eee13e732ce99585f73a266e/Image/2081658403858_.pic.jpg)
+        ![2081658403858_.pic](./img/2023-05-15-Comments-on-the-dp-SGD/2081658403858_.pic.jpg)
   
         
   
