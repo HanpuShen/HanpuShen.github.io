@@ -48,11 +48,11 @@ Overall Map:
 
 - Quadratic Loss: $\mathcal{L}(\mathbf{W}) = \frac{1}{2}\sum_i^n (f(\mathbf{W},x_i)-y_i)^2$
 
-- Gradient of output: $\frac{\part f(\theta,x)}{\part \theta}$, where $\theta$ denotes the parameters in the network
+- Gradient of output: $\frac{\partial f(\theta,x)}{\partial \theta}$, where $\theta$ denotes the parameters in the network
 
-- **NTK** at $x$: $\Theta (x) = \mathbb{E}_{\theta\sim Gaussian} \langle\frac{\part f(\theta,x)}{\part \theta},\frac{\part f(\theta,x)}{\part \theta}\rangle$
+- **NTK** at $x$: $\Theta (x) = \mathbb{E}_{\theta\sim Gaussian} \langle\frac{\partial f(\theta,x)}{\partial\theta},\frac{\partial f(\theta,x)}{\partial\theta}\rangle$
 
-- **Empirical NTK** of $f(\theta_t,x)$ at $x$: $\Theta_t(x) = \langle\frac{\part f(\theta_t,x)}{\part \theta_t},\frac{\part f(\theta_t,x)}{\part \theta_t}\rangle$
+- **Empirical NTK** of $f(\theta_t,x)$ at $x$: $\Theta_t(x) = \langle\frac{\partial f(\theta_t,x)}{\partial \theta_t},\frac{\partial f(\theta_t,x)}{\partial \theta_t}\rangle$
 
 ![image-20220720002053441](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220720002053441.png)
 
@@ -86,9 +86,9 @@ There are two major problem needed to be explained:
 
    Recall the definition of **Empirical NTK**
    $$
-   \Theta_t(x,y) = \langle\part_Wf_{W^{(0)}}(x),\part_Wf_{W^{(0)}}(y)\rangle
+   \Theta_t(x,y) = \langle\partial_Wf_{W^{(0)}}(x),\partial_Wf_{W^{(0)}}(y)\rangle
    $$
-   ​	As the NTK theory (Jacot et al. 2018) rigiously proofed that empirical NTK above converges to the deterministic Kernel $\Theta_{\infin}$ when the network is sufficiently large. Under this condition, the NTK feature space $\mathcal{F}$ is a RKHS induced by NTK. Because $M$ be a closed set restrict to $\mathbb{R}^{mL}$ , $d(x,y) = (x-y)^T\Theta_{\infin} (x-y)$  for any $x,y \in M$, then $\mathcal{F} = \{f_{W^{(0)}}(x)+\part_Wf_{W^{(0)}}(x) W\} |W \in \mathcal{B}(\mathbf{W}^{(0)},R/\sqrt{m})\}$ meets the definition of RKHS. NTK theory tells us that for every large scale ReLU Neural Network $f^*$ we could find a "good" approximation to it in the reference space $\mathcal{F}$, which means $\inf_{f\in\mathcal{F}}\{\ell(f)-\ell(f^*)\} \to 0$ as $m\to \infin$.
+   ​	As the NTK theory (Jacot et al. 2018) rigiously proofed that empirical NTK above converges to the deterministic Kernel $\Theta_{\infin}$ when the network is sufficiently large. Under this condition, the NTK feature space $\mathcal{F}$ is a RKHS induced by NTK. Because $M$ be a closed set restrict to $\mathbb{R}^{mL}$ , $d(x,y) = (x-y)^T\Theta_{\infin} (x-y)$  for any $x,y \in M$, then $\mathcal{F} = \{f_{W^{(0)}}(x)+\partial_Wf_{W^{(0)}}(x) W\} |W \in \mathcal{B}(\mathbf{W}^{(0)},R/\sqrt{m})\}$ meets the definition of RKHS. NTK theory tells us that for every large scale ReLU Neural Network $f^*$ we could find a "good" approximation to it in the reference space $\mathcal{F}$, which means $\inf_{f\in\mathcal{F}}\{\ell(f)-\ell(f^*)\} \to 0$ as $m\to \infin$.
 
    ​	Despite the theoretical guarantee, one recent research's experiments (Sanjeev et al. 2019) found the SVM epuiped with NTK could achieve superior performance on ==small dataset==, this justify the NTK induced RKHS is considerable more informative than many existing reference space. ![image-20220606211759181](./img/2023-05-15-Comments-on-the-dp-SGD/image-20220606211759181.png)
 
