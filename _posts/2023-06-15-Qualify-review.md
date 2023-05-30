@@ -1,4 +1,3 @@
-
 ---
 title: 'Qualify-review'
 date: 2023-06-15
@@ -6,6 +5,7 @@ permalink: /posts/2023/06/Qualify-review/
 tags:
   - Statistics
 ---
+
 # Qualify Exam Review:
 
 
