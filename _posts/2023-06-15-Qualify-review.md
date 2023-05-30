@@ -49,20 +49,20 @@ $\color{red}Remark:$ The support of  $(u,v) \in \{g(x,y): f(x,y)>0\}$.
 
 > If $x_1,\cdots,x_n$ are i.i.d with mean $\mu$ and finite variance $Var(x_1)= \sigma^2<\infty$, then
 > $$
-> \begin{align*}
-> \frac{\sum_ix_i-n\mu}{\sqrt{n\sigma^2}}=\frac{\sqrt{n}(\bar{x}_n-\mu)}{\sigma}\overset{D}{\to}N(0,1)
-> \end{align*}
-> $$
+ \begin{align*}
+ \frac{\sum_ix_i-n\mu}{\sqrt{n\sigma^2}}=\frac{\sqrt{n}(\bar{x}_n-\mu)}{\sigma}\overset{D}{\to}N(0,1)
+ \end{align*}
+ $$
 
 **Theorem**. (Slutsky)
 
 >If $X_n\overset{D}{\to}X$ and $Y_n\overset{D/P}{\to}C$ where C is a constant, then 
 >$$
->\begin{align*}
->& X_nY_n\overset{D}{\to}CX\\
->& X_n+Y_n\overset{D}{\to}X+C
->\end{align*}
->$$
+\begin{align*}
+& X_nY_n\overset{D}{\to}CX\\
+& X_n+Y_n\overset{D}{\to}X+C
+\end{align*}
+$$
 
 $\color{red}Remark:$
 
@@ -75,10 +75,10 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
 > If $\sqrt{n}(X_n-\mu)\overset{D}{\to}N(0,\sigma^2)$, and $g \in C_1$ then we have the following statement holds
 > $$
-> \begin{align*}
-> \sqrt{n}(g(X_n)-g(\mu))\overset{D}{\to}N(0,g'(\mu)^2\sigma^2)
-> \end{align*}
-> $$
+ \begin{align*}
+ \sqrt{n}(g(X_n)-g(\mu))\overset{D}{\to}N(0,g'(\mu)^2\sigma^2)
+ \end{align*}
+ $$
 
 ## Estimation Theory
 
