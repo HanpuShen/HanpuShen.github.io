@@ -9,7 +9,6 @@ tags:
 # Qualify Exam Review:
 
 
-
 ## Probability transformation
 
 **Theorem** (Bivariate Transformation) For $(u,v) = g(x,y)$, suppose $g$ is a invertable map, then the p.d.f can be written as:
