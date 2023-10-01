@@ -141,7 +141,7 @@ $\color{red}{Remark}$: *Complete sufficeint statistic may not exist*:
 > $$
 > Var(W(X)) \geq \frac{[\frac{d}{d\theta}E_\theta(W(X))]^2}{I_\theta}
 > $$
-> ![image-20230612224912568](./img/2023-06-15-Qualify-review/image-20230612224912568.png)
+> ![image-20230612224912568](./img/2023-06-15-Qualify-review/image-20230612232854739.png)
 
 ## Hypothesis Testing
 
