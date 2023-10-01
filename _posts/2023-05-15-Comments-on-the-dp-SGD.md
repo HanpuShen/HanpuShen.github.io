@@ -12,10 +12,11 @@ tags:
 ## Background:
 
 1.  Differential privacy!
-2. ![image-20220721131158989](./img/image1.png)
-3. ![See the source image](https://ts1.cn.mm.bing.net/th/id/R-C.b2f102abbe5a9ae02ffeb0ac4f8e06a3?rik=92%2fIJiNJB2aQ4w&riu=http%3a%2f%2fwww.cs.tau.ac.il%2f%7eiftachh%2fCourses%2fSeminars%2fDP%2fDP.png&ehk=Wj%2f4UTjGF2sglf1Gk%2fwsCSj%2bcSdZvrlcvOXm%2fKWFo2M%3d&risl=&pid=ImgRaw&r=0)
-4. Advanced machine learning algorithm: DNN
-5. Dp-Neural network = DP combine DNN
+2.  updata!!
+3. ![image-20220721131158989](./img/image1.png)
+4. ![See the source image](https://ts1.cn.mm.bing.net/th/id/R-C.b2f102abbe5a9ae02ffeb0ac4f8e06a3?rik=92%2fIJiNJB2aQ4w&riu=http%3a%2f%2fwww.cs.tau.ac.il%2f%7eiftachh%2fCourses%2fSeminars%2fDP%2fDP.png&ehk=Wj%2f4UTjGF2sglf1Gk%2fwsCSj%2bcSdZvrlcvOXm%2fKWFo2M%3d&risl=&pid=ImgRaw&r=0)
+5. Advanced machine learning algorithm: DNN
+6. Dp-Neural network = DP combine DNN
 
 Review of privacy analysis on DP-SGD: 1) 2014 advanced composition 2) 2016 abadi Chu Goodfellow they moment accountant 3) 2019 f-dp (hypothesis testing approach)
 sf
