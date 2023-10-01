@@ -32,3 +32,5 @@ To support this, all changes to the underlying code appear as a closed issue wit
 
 
 -- test line
+
+For mathmatical symbol, Github is using Mathjax to interpolate the latex expression. From time to time, recognizable symbol may appear. Good way is to try translate the latex expression into Mathjax via Chatgpt 4.
