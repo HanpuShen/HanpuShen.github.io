@@ -30,7 +30,7 @@ Conditional Expectation (Good exercise!!!): https://stats.stackexchange.com/ques
 
 **Definition**. (Converge in Prob.) 
 
-> We say a sequence of random variables (r.v) $\{x_n\}$ converge in probability measure to $x$, if $\forall \epsilon>0$, $\mathbb{P}(|x_n-x|>\epsilon) = 0\ as\ n\to\infty$. Denote as $x_n\overset{P}{\to}x$.
+> We say a sequence of random variables (r.v) $\{x_n\}$ converge in probability measure to $x$, if $\forall \epsilon>0$, $P(|x_n-x|>\epsilon) = 0\ as\ n\to\infty$. Denote as $x_n\overset{P}{\to}x$.
 
 **Lemma**. ==Continuity of Prob. Convergence==, for any continuous function $h()$, if $x_n\overset{P}{\to}x$ then $h(x_n)\overset{P}{\to}h(x)$.
 
