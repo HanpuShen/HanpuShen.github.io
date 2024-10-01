@@ -74,7 +74,11 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 **Theorem** (Delta method)
 
 > If $\sqrt{n}(X_n-\mu)\overset{D}{\to}N(0,\sigma^2)$, and $g \in C_1$ then we have the following statement holds
-> $$\begin{align*}\sqrt{n}(g(X_n)-g(\mu))\overset{D}{\to}N(0,g'(\mu)^2\sigma^2)\end{align*}$$
+> $$\begin{align*}\sqrt{n}(g(X_n)-g(\mu))\overset{D}{\to}N(0,g'(\mu)^2\sigma^2)\end{align*}$$​
+
+**Theorem** (Continuous map theorem)
+
+> Let $x_n$ be random variable, if $x_n\to x$ in distribution or probability or almost surely. Then continuous transformation also $g(x_n)\to g(x)$
 
 ## Estimation Theory
 
@@ -86,7 +90,7 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
 * Complete statistics: 
 
-  > If T(x) is complete statistic of $\theta$, then for any measurable function $h(\cdot)$, if for all $\theta\in\Theta$ $E_\theta[h(T(X)) = 0]$ , then $P(h(T(X)=0) =1$. 
+  > If T(x) is the complete statistic of $\theta$, then for any measurable function $h(\cdot)$, if for all $\theta\in\Theta$ $E_\theta[h(T(X)) = 0]$ , then $P(h(T(X)=0) =1$. 
 
   * For **exponential family**: 
 
