@@ -15,9 +15,9 @@
 
 ## Proximal Policy Optimization
 
-![image-20231006120130464](img/2023-06-28-Reinforcement-learning/image-20231006120130464.png)
+![image-20231006120130464](_posts/img/2023-06-28-Reinforcement-learning/image-20231006120130464.png)
 
-![image-20231006121412260](img/2023-06-28-Reinforcement-learning/image-20231006121412260.png)
+![image-20231006121412260](_posts/img/2023-06-28-Reinforcement-learning/image-20231006121412260.png)
 
 ## RL as Supervised learning
 
