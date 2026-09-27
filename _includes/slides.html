@@ -1,0 +1,22 @@
+{% comment %}
+  Embed a Google Slides deck or any Google Drive file (PDF, .pptx, ...) in a post.
+
+  {% include slides.html id="FILE_ID" %}                      Google Slides deck
+  {% include slides.html id="FILE_ID" type="drive" %}         any Drive file (PDF, PPTX, ...)
+
+  FILE_ID is the long code in the share link:
+    https://docs.google.com/presentation/d/FILE_ID/edit
+    https://drive.google.com/file/d/FILE_ID/view
+  The file must be shared as "Anyone with the link can view".
+{% endcomment %}
+{% if include.type == "drive" %}
+  {% capture src %}https://drive.google.com/file/d/{{ include.id }}/preview{% endcapture %}
+  {% capture link %}https://drive.google.com/file/d/{{ include.id }}/view{% endcapture %}
+{% else %}
+  {% capture src %}https://docs.google.com/presentation/d/{{ include.id }}/embed?start=false&loop=false{% endcapture %}
+  {% capture link %}https://docs.google.com/presentation/d/{{ include.id }}{% endcapture %}
+{% endif %}
+<div class="embed-slides">
+  <iframe src="{{ src }}" allowfullscreen loading="lazy" title="{{ include.title | default: 'Slides' }}"></iframe>
+</div>
+<p class="embed-slides__link"><a href="{{ link }}">Open in Google {% if include.type == "drive" %}Drive{% else %}Slides{% endif %} ↗</a></p>

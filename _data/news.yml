@@ -1,0 +1,4 @@
+# Short news items shown on the home page, newest first.
+# Add a line at the top; `text` is Markdown, so links work.
+- date: 2023-10-12
+  text: "Preprint on arXiv: [Differentially Private Non-convex Learning for Multi-layer Neural Networks](/publication/2023-10-12-DP-NN)."

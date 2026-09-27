@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Site-specific styles (kept separate from the theme so theme files stay stock)
+   ========================================================================== */
+
+/* Profile photo: crop to a circle instead of stretching a portrait photo */
+.author__avatar img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 175px;
+}
+@media (max-width: #{$large - 1px}) {
+  .author__avatar img { width: 48px; height: 48px; }
+}
+
+/* Home page sections */
+.home__heading {
+  margin: 2em 0 0.6em;
+  padding-bottom: 0.3em;
+  font-size: $type-size-4;
+  border-bottom: 1px solid $border-color;
+}
+
+.home__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.25em 0.8em;
+    font-size: $type-size-6;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    background: mix(#fff, $primary-color, 92%);
+  }
+}
+
+.home__news,
+.home__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li { margin-bottom: 0.9em; }
+}
+
+.home__news li {
+  display: flex;
+  gap: 1em;
+
+  time {
+    flex: 0 0 5.5em;
+    color: $gray;
+    font-size: $type-size-6;
+    padding-top: 0.2em;
+  }
+}
+
+.home__list-title {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.home__list-meta {
+  display: block;
+  color: $gray;
+  font-size: $type-size-6;
+}
+
+.home__more {
+  font-size: $type-size-6;
+}
+
+/* Google Slides / Drive embeds in posts */
+.embed-slides {
+  position: relative;
+  width: 100%;
+  padding-top: 59.27%; /* Google Slides 16:9 plus toolbar */
+  margin-bottom: 0.5em;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-color;
+  }
+}
+.embed-slides__link { font-size: $type-size-6; }
+
+/* Visitor map */
+.visitor-map { margin: 1em 0; text-align: center; overflow: hidden; }
+.visitor-map--small { max-width: 160px; opacity: 0.85; text-align: left; }
+.visitor-map--large { max-width: 100%; }
+
+/* Long equations and wide images in posts should not break the phone layout */
+.page__content {
+  img { max-width: 100%; height: auto; }
+  mjx-container, .MathJax_Display, .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+}

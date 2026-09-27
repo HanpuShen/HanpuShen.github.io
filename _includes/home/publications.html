@@ -1,0 +1,15 @@
+{% include base_path %}
+{% if site.publications.size > 0 %}
+<h2 class="home__heading">Publications</h2>
+<ul class="home__list">
+  {% assign pubs = site.publications | sort: "date" | reverse %}
+  {% for pub in pubs limit: include.limit %}
+  <li>
+    <a href="{{ base_path }}{{ pub.url }}" class="home__list-title">{{ pub.title }}</a>
+    <span class="home__list-meta">{% if pub.authors %}{{ pub.authors }} · {% endif %}<i>{{ pub.venue }}</i>, {{ pub.date | date: "%Y" }}
+      {% if pub.paperurl %} · <a href="{{ pub.paperurl }}">PDF</a>{% endif %}</span>
+  </li>
+  {% endfor %}
+</ul>
+<p class="home__more"><a href="{{ base_path }}/publications/">All publications →</a>{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar ↗</a>{% endif %}</p>
+{% endif %}

@@ -1,0 +1,23 @@
+{% comment %}
+  Visitor map widget. Configure `visitor_map` in _config.yml.
+  Usage: {% include visitor-map.html size="large" %}   (full map, /visitors/ page)
+         {% include visitor-map.html size="small" %}   (footer widget, every page)
+{% endcomment %}
+{% assign vm = site.visitor_map %}
+{% if vm.provider and vm.id != "" %}
+  {% if include.size == "large" %}{% assign w = "a" %}{% else %}{% assign w = "150" %}{% endif %}
+  <div class="visitor-map visitor-map--{{ include.size | default: 'small' }}">
+  {% case vm.provider %}
+  {% when "clustrmaps" %}
+    {% if vm.style == "globe" %}
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d={{ vm.id }}"></script>
+    {% else %}
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d={{ vm.id }}&cl=ffffff&w={{ w }}"></script>
+    {% endif %}
+  {% when "mapmyvisitors" %}
+    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d={{ vm.id }}&cl=ffffff&w={{ w }}"></script>
+  {% endcase %}
+  </div>
+{% elsif include.size == "large" %}
+  <p class="notice">The visitor map is not switched on yet. See <code>visitor_map</code> in <code>_config.yml</code>.</p>
+{% endif %}

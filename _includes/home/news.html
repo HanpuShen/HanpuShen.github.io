@@ -1,0 +1,9 @@
+{% if site.data.news and site.data.news.size > 0 %}
+<h2 class="home__heading">News</h2>
+<ul class="home__news">
+  {% for item in site.data.news limit: include.limit %}
+  <li><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%b %Y" }}</time>
+    <span>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
+  {% endfor %}
+</ul>
+{% endif %}

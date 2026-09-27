@@ -1,22 +1,21 @@
-# main links links
+# Top navigation bar. Order here = order on the site.
+# `requires: <config key>` hides a link until that feature is switched on in _config.yml.
 main:
   - title: "Publications"
     url: /publications/
 
-#  - title: "Talks"
-#    url: /talks/    
-
-#  - title: "Teaching"
-#    url: /teaching/    
-    
-#  - title: "Portfolio"
-#    url: /portfolio/
-        
-  - title: "Blog Posts"
+  - title: "Blog"
     url: /year-archive/
-    
+
   - title: "CV"
     url: /files/CV.pdf
-    
-#  - title: "Guide"
-#    url: /markdown/
+
+  - title: "Visitors"
+    url: /visitors/
+    requires: visitor_map
+
+#  - title: "Talks"
+#    url: /talks/
+
+#  - title: "Teaching"
+#    url: /teaching/
