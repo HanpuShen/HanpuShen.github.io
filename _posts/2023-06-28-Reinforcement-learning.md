@@ -1,4 +1,12 @@
-# Reinforcement Learning
+---
+title: 'Reinforcement Learning'
+excerpt: "Notes on finite Markov decision processes, PPO, and viewing RL as supervised learning."
+date: 2023-06-28
+permalink: /posts/2023/06/Reinforcement-learning/
+tags:
+  - Reinforcement learning
+---
+
 
 ## Finite Markov Game
 
@@ -15,9 +23,9 @@
 
 ## Proximal Policy Optimization
 
-![image-20231006120130464](_posts/img/2023-06-28-Reinforcement-learning/image-20231006120130464.png)
+![image-20231006120130464](/images/posts/2023-06-28-Reinforcement-learning/image-20231006120130464.png)
 
-![image-20231006121412260](_posts/img/2023-06-28-Reinforcement-learning/image-20231006121412260.png)
+![image-20231006121412260](/images/posts/2023-06-28-Reinforcement-learning/image-20231006121412260.png)
 
 ## RL as Supervised learning
 
