@@ -196,3 +196,49 @@
     column-gap: 2em;
   }
 }
+
+/* ==========================================================================
+   Typography details (fonts/colours are set in _fonts.scss)
+   ========================================================================== */
+
+body { color: $text-color; }
+
+/* Links: blue, no underline until hover */
+a { text-decoration: none; }
+.page__content a,
+.page__content a:visited { color: $link-color; text-decoration: none; }
+.page__content a:hover { color: $link-color-hover; text-decoration: underline; }
+
+/* Headings: Montserrat, light rather than bold */
+h1, h2, h3, h4, h5, h6 { font-family: $heading-font; color: $text-color; }
+.page__title {
+  font-family: $heading-font;
+  font-weight: 400;
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+.page__content h2,
+.home__heading {
+  font-family: $heading-font;
+  font-weight: 500;
+  font-size: 1.35em;
+}
+.page__content h2 { border-bottom: none; }
+
+/* Body text */
+.page__content p,
+.page__content li { line-height: 1.7; }
+
+/* Navigation bar */
+.masthead__menu-item a { font-family: $sans-serif; font-weight: 400; color: $text-color; }
+.masthead__menu-item--lg a { font-weight: 700; }
+
+/* Sidebar name */
+.author__name { font-family: $heading-font; font-weight: 400; font-size: 1.4em; color: $text-color; }
+.author__bio { color: $gray; }
+.author__urls a { color: $link-color; }
+
+/* Lists on the home page */
+.home__list-title { font-weight: 500; }
+.home__news-when { font-family: $sans-serif; }
