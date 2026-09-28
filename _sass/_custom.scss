@@ -6,7 +6,7 @@
 .author__avatar img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 50% 50%;
   width: 175px;
 }
 @media (max-width: #{$large - 1px}) {
