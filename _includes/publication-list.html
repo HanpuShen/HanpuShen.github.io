@@ -1,0 +1,15 @@
+{% comment %} Publication list used on the home page and /publications/. Optional: limit {% endcomment %}
+{% include base_path %}
+{% assign pubs = site.publications | sort: "date" | reverse %}
+<ul class="home__list pub-list">
+  {% for pub in pubs limit: include.limit %}
+  <li>
+    <a href="{{ base_path }}{{ pub.url }}" class="home__list-title">{{ pub.title }}</a>
+    {% if pub.authors %}<span class="pub-list__authors">{{ pub.authors }}</span>{% endif %}
+    <span class="home__list-meta"><span class="pub-list__venue">{{ pub.venue }}</span>
+      {% if pub.paperurl %} · <a href="{{ pub.paperurl }}">PDF</a>{% endif %}
+      {% if pub.codeurl %} · <a href="{{ pub.codeurl }}">Code</a>{% endif %}
+      {% if pub.note %} · {{ pub.note }}{% endif %}</span>
+  </li>
+  {% endfor %}
+</ul>

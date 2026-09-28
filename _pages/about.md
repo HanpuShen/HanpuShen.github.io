@@ -1,14 +1,24 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "About me"
+excerpt: "Hanpu Shen — Statistics PhD student at UC Irvine."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a third-year PhD student in Statistics at UC Irvine. I'm fortunate to be advised by [Roy Fox](https://royf.org).
+I am a PhD student in Statistics at UC Irvine, advised by Prof. Weining Shen and Prof. [Roy Fox](https://royf.org). I work on reinforcement learning.
 
- with a strong interest in reinforcement learning, empirical bayes, and statistical learning theory in general. My work, recently, focuses on developing efficient algorithms for offline-to-online RL finetuning. I am passionate about advancing research at the intersection of statistics and computer science to solve complex real-world problems. In my free time, I enjoy exploring new technologies and sharing my knowledge through writing and mentoring.
+Before UCI, I received my B.S. in Statistics and Data Science from the Southern University of Science and Technology (SUSTech).
 
+{% if site.data.research and site.data.research.size > 0 %}
+<h2 class="home__heading">Research interests</h2>
+<ul class="home__tags">
+{% for topic in site.data.research %}<li>{{ topic }}</li>{% endfor %}
+</ul>
+{% endif %}
+
+{% include home/news.html limit=5 %}
+{% include home/publications.html limit=5 %}
+{% include home/recent-posts.html limit=3 %}

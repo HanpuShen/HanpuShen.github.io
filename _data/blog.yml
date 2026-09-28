@@ -1,0 +1,14 @@
+# Blog categories, in display order. Each post sets `category: <key>`.
+# A category with no posts is hidden automatically.
+- key: research
+  title: "Research notes"
+  description: "Working notes on problems from my own research."
+- key: study
+  title: "Study notes"
+  description: "Notes I wrote while learning a topic: definitions, key results and examples."
+- key: thoughts
+  title: "Thoughts"
+  description: "Shorter essays and opinions."
+- key: talks
+  title: "Talks & slides"
+  description: "Slides from talks and reading groups."

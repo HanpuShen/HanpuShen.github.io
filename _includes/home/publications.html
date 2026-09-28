@@ -1,0 +1,6 @@
+{% include base_path %}
+{% if site.publications.size > 0 %}
+<h2 class="home__heading">Publications</h2>
+{% include publication-list.html limit=include.limit %}
+<p class="home__more"><a href="{{ base_path }}/publications/">All publications →</a>{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar ↗</a>{% endif %}</p>
+{% endif %}

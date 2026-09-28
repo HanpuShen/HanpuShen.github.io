@@ -1,36 +1,57 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# hanpushen.github.io
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+Hanpu Shen's personal website, live at <https://hanpushen.github.io>.
+It is a Jekyll site based on [academicpages](https://github.com/academicpages/academicpages.github.io).
+GitHub Pages rebuilds it automatically on every push to `master`.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## Where things live
 
-# Instructions
+| To change…                  | Edit                                                        |
+|-----------------------------|-------------------------------------------------------------|
+| Bio text on the home page   | `_pages/about.md`                                           |
+| Research interests (chips)  | `_data/research.yml`                                        |
+| News items                  | `_data/news.yml` (newest first, one entry per item)         |
+| Name, photo, sidebar links  | `author:` block in `_config.yml`; photo in `images/`        |
+| Top navigation bar          | `_data/navigation.yml`                                      |
+| CV                          | `_pages/cv.md`                                              |
+| Styles                      | `_sass/_custom.scss` (theme files are left untouched)       |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Adding content
 
-See more info at https://academicpages.github.io/
+**Blog post.** Copy `_drafts/TEMPLATE-post.md` to `_posts/YYYY-MM-DD-short-name.md` and fill it in.
+Images go in `images/posts/YYYY-MM-DD-short-name/`.
+To embed slides from Google Drive, share the file as "Anyone with the link can view",
+then add `{% include slides.html id="FILE_ID" %}` (Google Slides) or
+`{% include slides.html id="FILE_ID" type="drive" %}` (PDF/PPTX in Drive).
+The post appears on the home page and in the blog automatically.
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+**Publication.** Add a file to `_publications/` (copy the existing one). Put the PDF in `files/`.
+It appears on the home page and on `/publications/` automatically.
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+## Visitor map
 
-# Changelog -- bugfixes and enhancements
+Static sites cannot log visitors by themselves, so the map uses a free counter service.
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+1. Register the site at <https://clustrmaps.com> (or <https://mapmyvisitors.com>).
+2. From the embed code they give you, copy the long value after `d=`.
+3. In `_config.yml`, set `visitor_map.provider` to `"clustrmaps"` (or `"mapmyvisitors"`) and `visitor_map.id` to that value.
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+A small widget then loads in the footer of every page (that is what records visits), the full map
+appears at `/visitors/`, and a "Visitors" link shows up in the navigation bar.
+For detailed analytics you can also add a Google Analytics 4 ID under `analytics.google.tracking_id`.
 
+## Previewing locally
 
--- test line
+Requires Ruby, Bundler and Node.
 
-For mathmatical symbol, Github is using Mathjax to interpolate the latex expression. From time to time, recognizable symbol may appear. Good way is to try translate the latex expression into Mathjax via Chatgpt 4.
+```bash
+bundle config set --local path vendor/bundle && bundle install   # once
+npm install                                                       # once (Playwright)
+
+npm run serve                                   # live site at http://localhost:4000
+npm run preview                                 # build + desktop/phone screenshots
+```
+
+`tools/preview.mjs` screenshots the main pages at desktop (1440px) and phone (390px) width side by side,
+and flags broken pages or horizontal scrolling. Open `preview/index.html` to review them before pushing.
+Use `--pages "/,/some/page/"` to choose which pages to capture.

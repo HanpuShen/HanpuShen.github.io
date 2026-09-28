@@ -1,6 +1,8 @@
 {% if site.analytics.provider and page.analytics != false %}
 
 {% case site.analytics.provider %}
+{% when "google-gtag" %}
+  {% if site.analytics.google.tracking_id %}{% include /analytics-providers/google-gtag.html %}{% endif %}
 {% when "google" %}
   {% include /analytics-providers/google.html %}
 {% when "google-universal" %}

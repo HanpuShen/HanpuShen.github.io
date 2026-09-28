@@ -1,13 +1,14 @@
 ---
-title: 'Qualify-review'
+title: 'Statistics Qualifying Exam Review'
+excerpt: "Review notes for the statistics qualifying exam, starting from probability transformations."
 date: 2023-06-15
 permalink: /posts/2023/06/Qualify-review/
 tags:
   - Statistics
+category: study
 ---
 
-# Qualify Exam Review:
-
+{% include toc %}
 
 ## Probability transformation
 
@@ -86,7 +87,7 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
 * minimal sufficiency:
 
-  ![image-20230612122243320](./img/2023-06-15-Qualify-review/image-20230612122243320.png)
+  ![image-20230612122243320](/images/posts/2023-06-15-Qualify-review/image-20230612122243320.png)
 
 * Complete statistics: 
 
@@ -94,7 +95,7 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
   * For **exponential family**: 
 
-  > ![image-20230612232854739](./img/2023-06-15-Qualify-review/image-20230612232854739.png)
+  > ![image-20230612232854739](/images/posts/2023-06-15-Qualify-review/image-20230612232854739.png)
 
 * Ancillary statistics: 
 
@@ -119,7 +120,7 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
 2. Asymptotic properties: CLT method implies the MLE estimator follows asymptotic normal distribution. 
 
-   ![image-20230615170745825](./img/2023-06-15-Qualify-review/image-20230615170745825.png)
+   ![image-20230615170745825](/images/posts/2023-06-15-Qualify-review/image-20230615170745825.png)
 
 3. ==Regularity conditions==: 1)  $\hat\theta$ lies inside the parameter space. 2) Identifiable
 
@@ -137,7 +138,7 @@ In order to extend the result from CLT to some function of a convergence r.vs. H
 
 $\color{red}{Remark}$: *Complete sufficeint statistic may not exist*:
 
-> ![image-20230612231913185](./img/2023-06-15-Qualify-review/image-20230612231913185.png)
+> ![image-20230612231913185](/images/posts/2023-06-15-Qualify-review/image-20230612231913185.png)
 
 **Theorem** (CR-low bound)
 
@@ -145,7 +146,7 @@ $\color{red}{Remark}$: *Complete sufficeint statistic may not exist*:
 > $$
 > Var(W(X)) \geq \frac{[\frac{d}{d\theta}E_\theta(W(X))]^2}{I_\theta}
 > $$
-> ![image-20230612224912568](./img/2023-06-15-Qualify-review/image-20230612232854739.png)
+> ![image-20230612224912568](/images/posts/2023-06-15-Qualify-review/image-20230612232854739.png)
 
 ## Hypothesis Testing
 

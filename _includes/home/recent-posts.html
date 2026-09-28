@@ -1,0 +1,13 @@
+{% include base_path %}
+{% if site.posts.size > 0 %}
+<h2 class="home__heading">Recent writing</h2>
+<ul class="home__list">
+  {% for post in site.posts limit: include.limit %}
+  <li>
+    <a href="{{ base_path }}{{ post.url }}" class="home__list-title">{{ post.title }}</a>
+    <span class="home__list-meta">{{ post.date | date: "%b %d, %Y" }}{% if post.excerpt %} · {{ post.excerpt | strip_html | truncatewords: 20 }}{% endif %}</span>
+  </li>
+  {% endfor %}
+</ul>
+<p class="home__more"><a href="{{ base_path }}/blog/">All posts →</a></p>
+{% endif %}

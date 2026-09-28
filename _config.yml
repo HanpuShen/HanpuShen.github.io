@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Hanpu's website"
 title_separator          : "-"
 name                     : &name "Hanpu Shen"
-description              : &description "UCI STATS Phd"
+description              : &description "Hanpu Shen — Statistics PhD student at UC Irvine working on reinforcement learning and generative models."
 url                      : https://hanpushen.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hanpushen.github.io"
@@ -73,9 +73,22 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false, "google-gtag" (GA4), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : # GA4 measurement ID, e.g. "G-XXXXXXXXXX". Leave blank to disable.
+
+
+# Visitor map (where visitors come from). Static sites cannot record visits
+# themselves, so this uses a free third-party counter:
+#   1. Register this site at https://clustrmaps.com or https://mapmyvisitors.com
+#   2. Copy the long code after "d=" in the embed snippet they give you
+#   3. Paste it into `id` below and set `provider`
+# A small widget then loads on every page (that is what records visits)
+# and the full map is shown on /visitors/.
+visitor_map:
+  provider               : false # false, "clustrmaps", "mapmyvisitors"
+  id                     : ""
+  style                  : "globe" # "globe" (3D, clustrmaps only) or "map"
 
 
 # Site Author
@@ -83,11 +96,11 @@ author:
   name             : "Hanpu Shen"
   avatar           : "profile.png"
   bio              : "Statistics PhD at UCI"
-  location         : "Irvine, California"
+  location         :
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=-OpyDXUAAAAJ&hl=en&oi=ao"
-  email            :
+  email            : "hanpushen@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -103,13 +116,13 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
@@ -123,6 +136,15 @@ include:
   - _pages
   - files
 exclude:
+  - CLAUDE.md
+  - README.md
+  - CONTRIBUTING.md
+  - CHANGELOG.md
+  - package-lock.json
+  - tools
+  - preview
+  - talkmap.ipynb
+  - talkmap.py
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -191,11 +213,16 @@ collections:
 
 # Defaults
 defaults:
+  # Blog is hidden for now: posts are not built. To open the blog again,
+  # delete `published: false` here and in _pages/{blog,year-archive,
+  # tag-archive,category-archive}.html, and uncomment "Blog" in
+  # _data/navigation.yml.
   # _posts
   - scope:
       path: ""
       type: posts
     values:
+      published: false
       layout: single
       author_profile: true
       read_time: true

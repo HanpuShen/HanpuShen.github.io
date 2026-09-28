@@ -13,7 +13,9 @@
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
+            {% if link.requires == nil or site[link.requires].provider %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>

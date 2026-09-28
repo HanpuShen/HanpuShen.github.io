@@ -1,2 +1,10 @@
 _site/
 
+.bundle/
+vendor/
+node_modules/
+preview/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+Gemfile.lock
