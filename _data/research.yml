@@ -1,5 +1,4 @@
-# Research interests shown on the home page. Order = display order.
-- Reinforcement learning
-- Embodied AI
-- Deep generative models
-- World models
+# Research interests shown on the home page, one per line, e.g.
+# - Reinforcement learning
+# The section is hidden while this list is empty.
+[]

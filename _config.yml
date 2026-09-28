@@ -136,6 +136,15 @@ include:
   - _pages
   - files
 exclude:
+  - CLAUDE.md
+  - README.md
+  - CONTRIBUTING.md
+  - CHANGELOG.md
+  - package-lock.json
+  - tools
+  - preview
+  - talkmap.ipynb
+  - talkmap.py
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -204,11 +213,16 @@ collections:
 
 # Defaults
 defaults:
+  # Blog is hidden for now: posts are not built. To open the blog again,
+  # delete `published: false` here and in _pages/{blog,year-archive,
+  # tag-archive,category-archive}.html, and uncomment "Blog" in
+  # _data/navigation.yml.
   # _posts
   - scope:
       path: ""
       type: posts
     values:
+      published: false
       layout: single
       author_profile: true
       read_time: true

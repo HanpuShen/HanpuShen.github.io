@@ -16,3 +16,9 @@ See README.md for the file map (bio, news, research interests, navigation, style
   `npm run preview` (needs `bundle install` into vendor/bundle and `npm install` first), then look at `preview/*.png`.
 - Commit in small, descriptive commits.
 - Never publish phone numbers or other private contact details on the site.
+
+## Current state
+- Blog is hidden (posts `published: false` via _config.yml defaults, blog/archive pages `published: false`,
+  nav link commented out) until Hanpu decides what to include and the notes are cleaned up.
+- Research interests section is hidden until Hanpu provides the text (`_data/research.yml` is empty).
+- Hanpu prefers a short, plain bio — don't write long or elaborate About text.
