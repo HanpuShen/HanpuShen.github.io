@@ -96,8 +96,8 @@ author:
   name             : "Hanpu Shen"
   avatar           : "profile.png"
   bio              : "Statistics PhD at UCI"
-  location         : "Irvine, California"
-  employer         : "University of California, Irvine"
+  location         :
+  employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=-OpyDXUAAAAJ&hl=en&oi=ao"
   email            : "hanpushen@gmail.com"
