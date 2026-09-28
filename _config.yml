@@ -213,10 +213,8 @@ collections:
 
 # Defaults
 defaults:
-  # Blog is hidden for now: posts are not built. To open the blog again,
-  # delete `published: false` here and in _pages/{blog,year-archive,
-  # tag-archive,category-archive}.html, and uncomment "Blog" in
-  # _data/navigation.yml.
+  # Posts are unpublished by default; set `published: true` in a post's front
+  # matter to show it. The old 2023 notes stay hidden until they are cleaned up.
   # _posts
   - scope:
       path: ""
@@ -225,10 +223,11 @@ defaults:
       published: false
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      pagination: false
   # _pages
   - scope:
       path: ""

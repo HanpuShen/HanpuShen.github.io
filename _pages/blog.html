@@ -1,15 +1,12 @@
 ---
-published: false  # blog hidden for now, see _config.yml
 layout: single
 title: "Blog"
 permalink: /blog/
 author_profile: true
-excerpt: "Research notes, study notes and thoughts."
+excerpt: "Tutorials and notes."
 ---
 {% include base_path %}
 
-<p class="blog__intro">Notes on reinforcement learning, statistics and machine learning theory, grouped by type.
-Posts are also listed <a href="{{ base_path }}/year-archive/">by year</a> and <a href="{{ base_path }}/tags/">by tag</a>.</p>
 
 <nav class="blog__cats">
 {% for cat in site.data.blog %}
@@ -26,10 +23,9 @@ Posts are also listed <a href="{{ base_path }}/year-archive/">by year</a> and <a
     <p class="blog__cat-desc">{{ cat.description }}</p>
     <div class="blog__grid">
     {% for post in cat_posts %}
-      {% assign words = post.content | strip_html | number_of_words %}
       <a class="blog__card" href="{{ base_path }}{{ post.url }}">
         <span class="blog__card-title">{{ post.title }}</span>
-        <span class="blog__card-meta">{{ post.date | date: "%b %Y" }} · {% if words < site.words_per_minute %}1{% else %}{{ words | divided_by: site.words_per_minute }}{% endif %} min read</span>
+        <span class="blog__card-meta">{{ post.date | date: "%b %Y" }}</span>
         {% if post.excerpt %}<span class="blog__card-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</span>{% endif %}
         {% if post.tags.size > 0 %}<span class="blog__card-tags">{% for t in post.tags %}<span>{{ t }}</span>{% endfor %}</span>{% endif %}
       </a>
