@@ -13,7 +13,7 @@ GitHub Pages rebuilds it automatically on every push to `master`.
 | News items                  | `_data/news.yml` (newest first, one entry per item)         |
 | Name, photo, sidebar links  | `author:` block in `_config.yml`; photo in `images/`        |
 | Top navigation bar          | `_data/navigation.yml`                                      |
-| CV                          | `_pages/cv.md`                                              |
+| CV                          | replace `files/Hanpu_Shen_CV.pdf` (website version: no phone, no under-review papers) |
 | Styles                      | `_sass/_custom.scss` (theme files are left untouched)       |
 
 ## Adding content
