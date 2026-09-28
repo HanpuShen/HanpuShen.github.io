@@ -22,3 +22,4 @@ See README.md for the file map (bio, news, research interests, navigation, style
   nav link commented out) until Hanpu decides what to include and the notes are cleaned up.
 - Research interests section is hidden until Hanpu provides the text (`_data/research.yml` is empty).
 - Hanpu prefers a short, plain bio — don't write long or elaborate About text.
+- Only published papers go on the site; do not list under-review / in-submission papers.
