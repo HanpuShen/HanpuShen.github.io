@@ -167,7 +167,11 @@
 
 /* Blog cards are whole-card links: no underlines inside */
 .page__content a.blog__card,
+.page__content a.blog__card:visited { color: $text-color; }
+.page__content a.blog__card,
 .page__content a.blog__card * { text-decoration: none; }
+.page__content a.blog__card .blog__card-title { color: $link-color; }
+.page__content a.blog__card .blog__card-meta { color: $gray; }
 
 /* Post table of contents: collapsible box above the post */
 .post-toc {

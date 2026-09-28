@@ -4,9 +4,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-# Blog is hidden until the notes are cleaned up (see "Defaults" in _config.yml).
-#  - title: "Blog"
-#    url: /blog/
+  - title: "Blog"
+    url: /blog/
 
   - title: "CV"
     url: /files/Hanpu_Shen_CV.pdf
