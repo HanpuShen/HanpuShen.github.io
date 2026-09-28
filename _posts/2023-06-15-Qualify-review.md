@@ -1,13 +1,14 @@
 ---
-title: 'Qualify-review'
+title: 'Statistics Qualifying Exam Review'
 excerpt: "Review notes for the statistics qualifying exam, starting from probability transformations."
 date: 2023-06-15
 permalink: /posts/2023/06/Qualify-review/
 tags:
   - Statistics
+category: study
 ---
 
-
+{% include toc %}
 
 ## Probability transformation
 

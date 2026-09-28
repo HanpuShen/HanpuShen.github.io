@@ -5,10 +5,10 @@ main:
     url: /publications/
 
   - title: "Blog"
-    url: /year-archive/
+    url: /blog/
 
   - title: "CV"
-    url: /files/CV.pdf
+    url: /cv/
 
   - title: "Visitors"
     url: /visitors/

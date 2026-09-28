@@ -2,7 +2,7 @@
 <h2 class="home__heading">News</h2>
 <ul class="home__news">
   {% for item in site.data.news limit: include.limit %}
-  <li><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%b %Y" }}</time>
+  <li><span class="home__news-when">{% if item.when %}{{ item.when }}{% else %}{{ item.date | date: "%b %Y" }}{% endif %}</span>
     <span>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
   {% endfor %}
 </ul>

@@ -1,5 +1,5 @@
 ---
-title: 'Comments on the dp-SGD'
+title: 'Notes on DP-SGD for Neural Networks'
 excerpt: "Notes on differentially private SGD and analysing it through the Neural Tangent Kernel."
 date: 2023-05-15
 permalink: /posts/2023/05/Comments-on-the-dp-SGD/
@@ -7,7 +7,10 @@ tags:
   - Differential Privacy
   - SGD
   - NTK
+category: research
 ---
+
+{% include toc %}
 
 ## Background:
 

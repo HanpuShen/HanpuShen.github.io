@@ -1,0 +1,47 @@
+---
+layout: single
+title: "Blog"
+permalink: /blog/
+author_profile: true
+excerpt: "Research notes, study notes and thoughts."
+---
+{% include base_path %}
+
+<p class="blog__intro">Notes on reinforcement learning, statistics and machine learning theory, grouped by type.
+Posts are also listed <a href="{{ base_path }}/year-archive/">by year</a> and <a href="{{ base_path }}/tags/">by tag</a>.</p>
+
+<nav class="blog__cats">
+{% for cat in site.data.blog %}
+  {% assign n = site.posts | where: "category", cat.key | size %}
+  {% if n > 0 %}<a href="#{{ cat.key }}">{{ cat.title }} <span>{{ n }}</span></a>{% endif %}
+{% endfor %}
+</nav>
+
+{% for cat in site.data.blog %}
+  {% assign cat_posts = site.posts | where: "category", cat.key %}
+  {% if cat_posts.size > 0 %}
+  <section class="blog__section" id="{{ cat.key }}">
+    <h2 class="home__heading">{{ cat.title }}</h2>
+    <p class="blog__cat-desc">{{ cat.description }}</p>
+    <div class="blog__grid">
+    {% for post in cat_posts %}
+      {% assign words = post.content | strip_html | number_of_words %}
+      <a class="blog__card" href="{{ base_path }}{{ post.url }}">
+        <span class="blog__card-title">{{ post.title }}</span>
+        <span class="blog__card-meta">{{ post.date | date: "%b %Y" }} · {% if words < site.words_per_minute %}1{% else %}{{ words | divided_by: site.words_per_minute }}{% endif %} min read</span>
+        {% if post.excerpt %}<span class="blog__card-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</span>{% endif %}
+        {% if post.tags.size > 0 %}<span class="blog__card-tags">{% for t in post.tags %}<span>{{ t }}</span>{% endfor %}</span>{% endif %}
+      </a>
+    {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}
+
+{% assign uncategorized = site.posts | where_exp: "p", "p.category == nil" %}
+{% if uncategorized.size > 0 %}
+<section class="blog__section" id="other">
+  <h2 class="home__heading">Other</h2>
+  <ul class="home__list">{% for post in uncategorized %}<li><a class="home__list-title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a><span class="home__list-meta">{{ post.date | date: "%b %Y" }}</span></li>{% endfor %}</ul>
+</section>
+{% endif %}

@@ -1,4 +1,10 @@
 # Short news items shown on the home page, newest first.
-# Add a line at the top; `text` is Markdown, so links work.
-- date: 2023-10-12
+# `when` is the label shown on the left (e.g. "Jul 2026" or "2026"); `text` is Markdown.
+- when: "2026"
+  text: "**REG: In-Sample RL via Regularizing the Evaluation Gap** accepted at **ICML 2026**."
+- when: "2026"
+  text: "**Differentially Private Non-Convex Learning: From GLMs to Multi-Layer Neural Networks** accepted at **AAMAS 2026**."
+- when: "Jun 2025"
+  text: "Joined Amazon SCOT in Bellevue, WA as an Applied Scientist Intern for the summer."
+- when: "Oct 2023"
   text: "Preprint on arXiv: [Differentially Private Non-convex Learning for Multi-layer Neural Networks](/publication/2023-10-12-DP-NN)."

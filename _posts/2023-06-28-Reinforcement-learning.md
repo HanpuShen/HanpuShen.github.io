@@ -1,12 +1,14 @@
 ---
-title: 'Reinforcement Learning'
+title: 'Reinforcement Learning Basics'
 excerpt: "Notes on finite Markov decision processes, PPO, and viewing RL as supervised learning."
 date: 2023-06-28
 permalink: /posts/2023/06/Reinforcement-learning/
 tags:
   - Reinforcement learning
+category: study
 ---
 
+{% include toc %}
 
 ## Finite Markov Game
 

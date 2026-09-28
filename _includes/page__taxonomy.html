@@ -4,6 +4,14 @@
   {% include tag-list.html %}
 {% endif %}
 
-{% if site.category_archive.type and page.categories[0] %}
+{% if page.category %}
+  {% assign blog_cat = site.data.blog | where: "key", page.category | first %}
+  {% if blog_cat %}
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Category: </strong>
+    <span itemprop="keywords"><a href="{{ base_path }}/blog/#{{ blog_cat.key }}" class="page__taxonomy-item" rel="tag">{{ blog_cat.title }}</a></span>
+  </p>
+  {% endif %}
+{% elsif site.category_archive.type and page.categories[0] %}
   {% include category-list.html %}
 {% endif %}

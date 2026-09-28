@@ -53,6 +53,7 @@ for (const page of pages) {
     const errors = [];
     tab.on('pageerror', e => errors.push(e.message));
     const resp = await tab.goto(base + page, { waitUntil: 'networkidle', timeout: 30000 }).catch(e => (errors.push(e.message), null));
+    await tab.waitForTimeout(1000); // let the theme's fade-in animation finish
     const overflow = await tab.evaluate(() => document.documentElement.scrollWidth - window.innerWidth).catch(() => 0);
     const file = `${slug}-${vp.name}.png`;
     await tab.screenshot({ path: join(outDir, file), fullPage: true });

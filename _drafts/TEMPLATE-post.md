@@ -5,9 +5,12 @@ title: 'Post title'
 date: 2026-01-01
 permalink: /posts/2026/01/short-name/
 excerpt: "One sentence shown in the blog list and on the home page."
+category: study   # one of the keys in _data/blog.yml: research, study, thoughts, talks
 tags:
   - Reinforcement learning
 ---
+
+{% include toc %}
 
 Write in Markdown. Inline math: $x^2$, display math: $$\int_0^1 f(x)\,dx$$
 
