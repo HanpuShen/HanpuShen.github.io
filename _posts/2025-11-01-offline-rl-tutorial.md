@@ -1,8 +1,10 @@
 ---
 title: 'Offline Reinforcement Learning'
 excerpt: "Why distribution shift makes offline RL hard, the main families of methods (ReBRAC, DICE, IQL), and practical advice."
-date: 2026-02-23
-permalink: /posts/2026/02/offline-rl-tutorial/
+date: 2025-11-01
+permalink: /posts/2025/11/offline-rl-tutorial/
+redirect_from:
+  - /posts/2026/02/offline-rl-tutorial/
 category: tutorials
 published: true
 tags:
