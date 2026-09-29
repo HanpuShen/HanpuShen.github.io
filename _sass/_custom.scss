@@ -9,8 +9,12 @@
   object-position: 50% 50%;
   width: 175px;
 }
+/* Narrow screens: the sidebar collapses into one row above the page;
+   keep the photo reasonably large there instead of the theme's tiny thumbnail */
 @media (max-width: #{$large - 1px}) {
-  .author__avatar img { width: 48px; height: 48px; }
+  .author__avatar { width: 100px; }
+  .author__avatar img { width: 100px; height: 100px; max-width: none; }
+  .author__content { vertical-align: middle; }
 }
 
 /* Home page sections */
