@@ -27,3 +27,5 @@ See README.md for the file map (bio, news, research interests, navigation, style
 - Only published papers go on the site; do not list under-review / in-submission papers.
 - CV is a PDF at `files/Hanpu_Shen_CV.pdf` (nav links to it; /cv/ redirects there). It is a website version of
   Hanpu's Drive CV with the phone number and under-review papers removed — keep it that way when updating.
+- Publications link straight to the real paper (`paperurl` in `_publications/*.md`: OpenReview/arXiv);
+  the old /publication/... pages just redirect there. Never invent paper links — ask Hanpu.
