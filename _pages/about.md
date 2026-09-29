@@ -8,9 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Statistics at UC Irvine, advised by Prof. Weining Shen and Prof. [Roy Fox](https://royf.org). I work on reinforcement learning.
-
-Before UCI, I received my B.S. in Statistics and Data Science from the Southern University of Science and Technology (SUSTech).
+Hey folks! I'm a PhD student at UC Irvine advised by Prof. [Roy Fox](https://royf.org). I'm interested in developing sample efficient and scalable reinforcement learning (RL) algorithms. More specifically, my main direction is to make RL scalable and generalizable so that we can apply RL to real-world robotics problems.
 
 {% if site.data.research and site.data.research.size > 0 %}
 <h2 class="home__heading">Research interests</h2>
