@@ -10,7 +10,7 @@ tags:
   - Offline RL
 ---
 
-Slides from my ICML 2026 talk. They rethink distribution shift in offline RL through the policy evaluation gap: choose policies whose value we can trust from the data, and turn that into a simple in-sample algorithm.
+Slides from my ICML 2026 talk. We rethink distribution shift in offline RL through the policy evaluation gap: choose policies whose value we can trust from the data, and turn that into a simple in-sample algorithm.
 Paper: [REG: In-Sample RL via Regularizing the Evaluation Gap](https://openreview.net/pdf?id=375MRN00Z0).
 
 {% include slides.html id="1zw3_KYunq5N-1HSCKkT9UWahha4pqDOvh7fHDDe88o0" title="Offline RL via the Evaluation Gap slides" %}
