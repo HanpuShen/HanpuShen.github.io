@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hey folks! I'm a PhD student at UC Irvine advised by Prof. [Roy Fox](https://royf.org). I'm interested in developing sample efficient and scalable reinforcement learning (RL) algorithms. More specifically, I design offline RL and maximum-entropy RL algorithms from first principles to enable sample-efficient robot learning. I'm also increasingly interested in pre-training generalist policies and leveraging world models for physical intelligence.
+Hey folks! I'm a PhD student at UC Irvine advised by Prof. Weining Shen and Prof. [Roy Fox](https://royf.org). I'm interested in developing sample efficient and scalable reinforcement learning (RL) algorithms. More specifically, I design offline RL and maximum-entropy RL algorithms from first principles to enable sample-efficient robot learning. I'm also increasingly interested in pre-training generalist policies and leveraging world models for physical intelligence.
 
 {% if site.data.research and site.data.research.size > 0 %}
 <h2 class="home__heading">Research interests</h2>
