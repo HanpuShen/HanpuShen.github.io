@@ -250,3 +250,16 @@ h1, h2, h3, h4, h5, h6 { font-family: $heading-font; color: $text-color; }
 /* Lists on the home page */
 .home__list-title { font-weight: 500; }
 .home__news-when { font-family: $sans-serif; }
+
+/* Optional screenshot at the top of a blog card (`teaser:` in a post) */
+.page__content .blog__card-teaser {
+  display: block;
+  width: calc(100% + 2.2em);
+  max-width: none;
+  margin: -1em -1.1em 0.3em;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  border-bottom: 1px solid $border-color;
+  border-radius: 6px 6px 0 0;
+}

@@ -1,5 +1,8 @@
 # Blog categories, in display order. Each post sets `category: <key>`.
 # A category with no posts is hidden automatically.
+- key: projects
+  title: "Projects"
+  description: "Tools I have built for research."
 - key: tutorials
   title: "Tutorials"
   description: "Slides from tutorials I have given."
