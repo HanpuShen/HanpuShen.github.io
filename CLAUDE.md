@@ -29,3 +29,5 @@ See README.md for the file map (bio, news, research interests, navigation, style
   Hanpu's Drive CV with the phone number and under-review papers removed — keep it that way when updating.
 - Publications link straight to the real paper (`paperurl` in `_publications/*.md`: OpenReview/arXiv);
   the old /publication/... pages just redirect there. Never invent paper links — ask Hanpu.
+- Blog "Projects" category: a post with `link:` (external URL, plus matching `redirect_to:`) makes the card link
+  straight there; optional `teaser:` adds a screenshot to the card. Research Manager is the first one.

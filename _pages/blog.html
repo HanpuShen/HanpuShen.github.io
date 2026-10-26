@@ -23,8 +23,10 @@ excerpt: "Tutorials and notes."
     <p class="blog__cat-desc">{{ cat.description }}</p>
     <div class="blog__grid">
     {% for post in cat_posts %}
-      <a class="blog__card" href="{{ base_path }}{{ post.url }}">
-        <span class="blog__card-title">{{ post.title }}</span>
+      {% if post.link %}{% assign href = post.link %}{% else %}{% capture href %}{{ base_path }}{{ post.url }}{% endcapture %}{% endif %}
+      <a class="blog__card" href="{{ href }}">
+        {% if post.teaser %}<img class="blog__card-teaser" src="{{ base_path }}{{ post.teaser }}" alt="" loading="lazy">{% endif %}
+        <span class="blog__card-title">{{ post.title }}{% if post.link %} ↗{% endif %}</span>
         <span class="blog__card-meta">{{ post.date | date: "%b %Y" }}</span>
         {% if post.excerpt %}<span class="blog__card-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</span>{% endif %}
         {% if post.tags.size > 0 %}<span class="blog__card-tags">{% for t in post.tags %}<span>{{ t }}</span>{% endfor %}</span>{% endif %}
